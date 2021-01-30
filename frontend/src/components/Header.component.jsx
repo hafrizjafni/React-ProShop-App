@@ -4,9 +4,9 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 const Header = () => {
   return (
     <header>
-      <Navbar bg='dark' variant='dark'>
+      <Navbar bg='light'>
         <Container>
-          <Navbar.Brand href='#home'>
+          <Navbar.Brand href='/'>
             <img
               alt=''
               src='/logo192.png'
@@ -16,6 +16,7 @@ const Header = () => {
             />{' '}
             ProShop
           </Navbar.Brand>
+
           <Nav>
             <Nav.Link href='/cart'>
               <i className='fas fa-shopping-cart'></i> Cart
