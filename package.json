@@ -1,0 +1,22 @@
+{
+  "name": "react-proshop-app",
+  "version": "1.0.0",
+  "description": "MERN shopping app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafrizjafni/React-ProShop-App.git"
+  },
+  "author": "Hafriz Jafni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hafrizjafni/React-ProShop-App/issues"
+  },
+  "homepage": "https://github.com/hafrizjafni/React-ProShop-App#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
