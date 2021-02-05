@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
-import Product from '../components/Product.component';
-import Message from '../components/Message.component';
-import Loader from '../components/Loader.component';
+import Product from '../components/product.component';
+import Message from '../components/message.component';
+import Loader from '../components/loader.component';
 import { listProducts } from '../actions/productActions';
 
-const Home = () => {
+const HomeScreen = () => {
   const dispatch = useDispatch();
 
   const productList = useSelector((state) => state.productList);
@@ -37,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;

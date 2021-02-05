@@ -10,12 +10,12 @@ import {
   Form,
   Button,
 } from 'react-bootstrap';
-import Rating from '../components/Rating.component';
-import Message from '../components/Message.component';
-import Loader from '../components/Loader.component';
+import Rating from '../components/rating.component';
+import Message from '../components/message.component';
+import Loader from '../components/loader.component';
 import { listProductDetails } from '../actions/productActions';
 
-const Product = ({ history, match }) => {
+const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
@@ -124,4 +124,4 @@ const Product = ({ history, match }) => {
   );
 };
 
-export default Product;
+export default ProductScreen;
