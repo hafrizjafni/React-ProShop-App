@@ -4,13 +4,20 @@ import { Row, Col, Table, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Message from '../components/message.component';
 import Loader from '../components/loader.component';
-import { listProducts } from '../actions/productActions';
+import { listProducts, deleteProduct } from '../actions/productActions';
 
 const ProductListScreen = ({ match, history }) => {
   const dispatch = useDispatch();
 
   const productList = useSelector((state) => state.productList);
   const { loading, products, error } = productList;
+
+  const productDelete = useSelector((state) => state.productDelete);
+  const {
+    loading: loadingDelete,
+    success: successDelete,
+    error: errorDelete,
+  } = productDelete;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -21,11 +28,11 @@ const ProductListScreen = ({ match, history }) => {
     } else {
       history.push('/login');
     }
-  }, [dispatch, history, userInfo]);
+  }, [dispatch, history, userInfo, successDelete]);
 
   const deleteHandler = (id) => {
     if (window.confirm('Are you sure?')) {
-      // DELETE PRODUCTS
+      dispatch(deleteProduct(id));
     }
   };
 
@@ -50,6 +57,8 @@ const ProductListScreen = ({ match, history }) => {
           </Button>
         </Col>
       </Row>
+      {loadingDelete && <Loader />}
+      {errorDelete && <Message variant='danger'>{errorDelete}</Message>}
       {loading ? (
         <Loader />
       ) : error ? (
