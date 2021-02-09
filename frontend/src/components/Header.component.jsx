@@ -1,7 +1,9 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import SearchBox from './search-box.component';
 import { logout } from '../actions/userActions';
 
 const Header = () => {
@@ -30,6 +32,8 @@ const Header = () => {
               ProShop
             </Navbar.Brand>
           </LinkContainer>
+
+          <Route render={({ history }) => <SearchBox history={history} />} />
 
           <Nav>
             <LinkContainer to='/cart'>
