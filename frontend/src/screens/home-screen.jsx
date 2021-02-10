@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
-import Product from '../components/product.component';
-import Message from '../components/message.component';
-import Loader from '../components/loader.component';
-import Paginate from '../components/paginate.component';
-import ProductCarousel from '../components/product-carousel.component';
+import Product from '../components/product';
+import Message from '../components/message';
+import Loader from '../components/loader';
+import Paginate from '../components/paginate';
+import ProductCarousel from '../components/product-carousel';
 import { listProducts } from '../actions/productActions';
 
 const HomeScreen = ({ match }) => {
@@ -24,7 +25,13 @@ const HomeScreen = ({ match }) => {
 
   return (
     <div>
-      {!keyword && <ProductCarousel />}
+      {!keyword ? (
+        <ProductCarousel />
+      ) : (
+        <Link to='/' className='btn btn-dark'>
+          Go Back
+        </Link>
+      )}
       <h2 className='text-center py-3'>Latest Products</h2>
       {loading ? (
         <Loader />

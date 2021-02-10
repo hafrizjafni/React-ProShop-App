@@ -10,9 +10,9 @@ import {
   Form,
   Button,
 } from 'react-bootstrap';
-import Rating from '../components/rating.component';
-import Message from '../components/message.component';
-import Loader from '../components/loader.component';
+import Rating from '../components/rating';
+import Message from '../components/message';
+import Loader from '../components/loader';
 import {
   listProductDetails,
   createProductReview,

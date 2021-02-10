@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Table, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import Message from '../components/message.component';
-import Loader from '../components/loader.component';
+import Message from '../components/message';
+import Loader from '../components/loader';
 import { listOrders } from '../actions/orderActions';
 
 const OrderListScreen = ({ history }) => {

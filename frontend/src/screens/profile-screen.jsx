@@ -4,8 +4,8 @@ import { Form, Row, Col, Table, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { getUserDetails, updateUserProfile } from '../actions/userActions';
 import { listMyOrders } from '../actions/orderActions';
-import Message from '../components/message.component';
-import Loader from '../components/loader.component';
+import Message from '../components/message';
+import Loader from '../components/loader';
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
 
 const ProfileScreen = ({ history }) => {

@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Message from '../components/message.component';
-import Loader from '../components/loader.component';
-import FormContainer from '../components/form-container.component';
+import Message from '../components/message';
+import Loader from '../components/loader';
+import FormContainer from '../components/form-container';
 import { listProductDetails, updateProduct } from '../actions/productActions';
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants';
 

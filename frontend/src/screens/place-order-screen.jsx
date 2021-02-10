@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Message from '../components/message.component';
-import CheckoutSteps from '../components/checkout-steps.component';
+import Message from '../components/message';
+import CheckoutSteps from '../components/checkout-steps';
 import { createOrder } from '../actions/orderActions';
 
 const PlaceOrderScreen = ({ history }) => {
