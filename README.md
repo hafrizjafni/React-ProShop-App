@@ -1,4 +1,4 @@
-# ProShop Application
+# ProShop Application Using React
 
 ## Description
 
